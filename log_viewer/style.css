@@ -1,0 +1,11 @@
+#listContainer {
+    width: 300px;
+    height: 750px;
+    overflow-y: scroll;
+    margin: 0 auto;
+    background-color: gray;
+}
+
+li {
+    width: 300px;
+}

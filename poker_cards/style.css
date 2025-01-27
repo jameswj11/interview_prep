@@ -1,0 +1,22 @@
+.card {
+    width: 150px;
+    height: 200px;
+    border: 2px solid black;
+    background-color: white;
+    display: inline-block;
+    position: absolute;
+}
+
+.hearts, .diamonds {
+    color: red;
+}
+
+.spades, .clubs {
+    color: black;
+}
+
+#handContainer {
+    position: absolute;
+    top: 300px;
+    left: 50px;
+}

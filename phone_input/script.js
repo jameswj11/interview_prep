@@ -1,33 +1,22 @@
 let input = document.getElementById("inputText");
 let display = document.getElementById("displayText");
-
 let phoneNumber;
 
-input.addEventListener("keypress", (event)=>{
-    // console.log(event)
-    if (display.innerHTML.length >= 14) {
-        input.disabled = true;
-        return;
-    };
+input.addEventListener("keyup", (event)=>{
+    if (event.key >= 0 && event.key <= 9) {
+        let text = event.target.value;
     
-    phoneNumber = event.target.value;
-
-    updateDisplay(phoneNumber);
-
-    // if (display.innerHTML < 3) {
-
-    // }
-    // else if (display.innerHTML.length == 3) {
-    //     let placeholder = display.innerHTML
-    //     display.innerHTML = '(' + placeholder + ') ';
-    // } else if (display.innerHTML.length == 9) {
-    //     placeholder = display.innerHTML;
-    //     display.innerHTML = placeholder + '-';
-    // }
+        if (display.innerHTML.length >= 14) {
+            input.disabled = true;
+            return;
+        };
+    
+        display.innerHTML = text;
+    
+        if (text.length == 10) {
+            display.innerHTML = '(' + text.substring(0, 3) + ') ' + text.substring(3, 6) + '-' + text.substring(6, text.length);
+        } 
+    } else {
+        event.target.value = event.target.value.slice(0, event.target.value.length - 1)
+    }
 })
-
-function updateDisplay(phoneNumber) {
-    console.log(phoneNumber);
-    display.innerHTML = phoneNumber;
-    console.log(display.innerHTML)
-}

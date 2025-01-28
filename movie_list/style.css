@@ -9,11 +9,34 @@ img {
     display: block;
 }
 
+#modalContainer {
+    position: absolute;
+    left: 25vw;
+}
+
 .modal {
     width: 500px;
-    height: 800px;
+    height: 775px;
     background-color: bisque;
     padding-top: 20px;
+}
+
+.open {
+    animation: scaleUpModal 1.5s ease-in-out;
+}
+
+.closing {
+    animation: scaleDownModal 1.5s ease-in-out;
+}
+
+@keyframes scaleUpModal {
+    0% { scale: 0 }
+    100% { scale: 1}
+}
+
+@keyframes scaleDownModal {
+    0% { scale: 1}
+    100% { scale: 0}
 }
 
 #detailsBox {

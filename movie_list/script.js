@@ -64,6 +64,7 @@ function createModal(json) {
     closeBtn.addEventListener('click', closeModal);
 
     modal.setAttribute('class', 'modal');
+    modal.setAttribute('id', 'detailModal');
     img.setAttribute('src', json['Poster']);
 
     modal.append(closeBtn);
@@ -85,10 +86,18 @@ function createModal(json) {
     })
 
     modalContainer.append(modal);
+    modal.classList.add("open");
 }
 
 function closeModal(e) {
-    console.log('closeModal')
+    let modal = document.getElementById("detailModal");
+    let modalContainer = document.getElementById("modalContainer")
+    modal.classList.remove("open");
+    modal.classList.add("closing");
+
+    setTimeout(function() {
+        modalContainer.innerHTML = '';
+    }, 1500)
 }
 
 getData();

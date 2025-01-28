@@ -1,0 +1,33 @@
+p:hover {
+    color: red;
+    cursor: pointer;
+}
+
+img {
+    max-width: 400px;
+    margin: 0 auto;
+    display: block;
+}
+
+.modal {
+    width: 500px;
+    height: 800px;
+    background-color: bisque;
+    padding-top: 20px;
+}
+
+#detailsBox {
+    height: 300px;
+    width: 450px;
+    overflow-y: scroll;
+    background-color: gray;
+    display: block;
+    margin: 0 auto;
+    padding-left: 10px;
+}
+
+.closeBtn {
+    position: absolute;
+    top: 0px;
+    left: 20px;
+}

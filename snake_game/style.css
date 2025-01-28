@@ -1,0 +1,6 @@
+#gameBoard {
+    display: grid;
+    grid-template-columns: repeat(40, 25px);
+    grid-template-rows: repeat(40, 25px);
+    border: 1px solid black;
+}

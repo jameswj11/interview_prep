@@ -1,0 +1,18 @@
+#progressBar {
+    height: 100px;
+    width: 1000px;
+    border: 1px solid red;
+}
+
+#fill {
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    animation: progressFill 5s linear
+}
+
+@keyframes progressFill {
+    0% { width: 0%;}
+    100% { width: 100%;}
+}
+
